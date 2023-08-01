@@ -16,13 +16,10 @@
 -- vim.wo: 
 -- 	maps to vim.api.nvim_win_set_option; equivalent to :setlocal for window options.
 
--- LEADER
--- These keybindings need to be defined before the first /
--- is called; otherwise, it will default to "\"
-vim.g.mapleader = ","
-vim.g.localleader = "\\"
+local utils = require("utils")
 
 -- IMPORTS
+require('globals')          -- Globals
 require('vars')             -- Variables
 require('opts')             -- Options
 require('plug')             -- Plugins

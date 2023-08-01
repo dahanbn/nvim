@@ -3,10 +3,6 @@
 -- helpful ressources:
 --  https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/
 
-
--- setting the language of Vim to english
-vim.api.nvim_exec ('language en_US', true)
-
 local opt = vim.opt
 
 -- [[ Context ]]
@@ -45,5 +41,8 @@ opt.syntax = "ON"                -- str:  Allow syntax highlighting
 opt.termguicolors = true         -- bool: If term supports ui color then enable
 vim.cmd[[colorscheme dracula]]       -- cmd:  Set the colorscheme
 
--- disabling Neovim Perl Provider
+-- [[ Clipboard ]]
+opt.clipboard:append('unnamedplus')   -- add system clipboard to registers
+
+-- [[ disabling Neovim Perl Provider ]]
 vim.g['loaded_perl_provider'] = 0

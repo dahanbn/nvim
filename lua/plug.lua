@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
   use { 'majutsushi/tagbar' }                        -- code structure
   use { 'Yggdroot/indentLine' }                      -- see indentation
   use { 'tpope/vim-fugitive' }                       -- git integration
+  use { 'tpope/vim-commentary' }                     -- commentary
+  use { 'tpope/vim-surround' }                       -- surround
   use { 'junegunn/gv.vim' }                          -- commit history
   use { 'windwp/nvim-autopairs' }
 
@@ -47,12 +49,15 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
+  use { 'JoosepAlviste/nvim-ts-context-commentstring'}
 
   use { 'williamboman/mason.nvim' }
   use { 'williamboman/mason-lspconfig.nvim' }
   use { 'neovim/nvim-lspconfig' }
 
-  use { 'numToStr/Comment.nvim' }
+  use { 'gelguy/wilder.nvim' }                        -- 
+
+--  use { 'numToStr/Comment.nvim' }
 
   use { "folke/which-key.nvim" }
 
