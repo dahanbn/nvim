@@ -37,7 +37,7 @@ require'nvim-treesitter.configs'.setup {
                         "html",
                         "css",
                         "gitignore",
-                        "help",
+                        "vimdoc",
                         "json",
                         "make",
                         "cmake",
@@ -103,7 +103,7 @@ require("mason-lspconfig").setup()
 -- After setting up mason-lspconfig you may set up servers via lspconfig
 -- require("lspconfig").rust_analyzer.setup {}
 
-require("lspconfig").sumneko_lua.setup {}
+require("lspconfig").lua_ls.setup {}
 require("lspconfig").pyright.setup {}
 require("lspconfig").ruby_ls.setup {}
 require("lspconfig").marksman.setup {}
